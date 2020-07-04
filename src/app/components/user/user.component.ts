@@ -18,20 +18,20 @@ export class UserComponent {
         city: 'Boston',
         state: 'MA'
     };
-    fullName;
-    message;
+    //fullName;
+    //message;
 
     // Method
     constructor() {
 
     }
     // Custom Methods
-    sayHello() {
-        this.message = 'Hello ' + this.firstName + ' ' + this.lastName;
-    }
+    //sayHello() {
+    //    this.message = 'Hello ' + this.firstName + ' ' + this.lastName;
+    //}
 
-    showAge() {
-        return this.age;
-    }
+    //showAge() {
+    //    return this.age;
+    //}
     
  }
