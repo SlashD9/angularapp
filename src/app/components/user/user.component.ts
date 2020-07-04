@@ -23,18 +23,15 @@ export class UserComponent {
 
     // Method
     constructor() {
-        this.sayHello();  
-        console.log(this.age);
-        this.hasBirthday();
-        console.log(this.age);
+
     }
     // Custom Methods
     sayHello() {
         this.message = 'Hello ' + this.firstName + ' ' + this.lastName;
     }
 
-    hasBirthday() {
-        this.age += 1;
+    showAge() {
+        return this.age;
     }
     
  }
