@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_compiler';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 
-import { User } from '../models/User';
+import { User } from '../../models/User';
 
 @Component({
     selector: 'app-user',
