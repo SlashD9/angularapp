@@ -10,43 +10,29 @@ import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 
 export class UserComponent {
     // Properties
-
-    firstName: string = 'John';
-    lastName: string = 'Smith';
-    age: number = 30;
-    address;
-
-    //firstName = 'John';
-    //lastName = 'Doe';
-    //age = 30;
-    //address = {
-        //street: '50 Main St',
-        //city: 'Boston',
-        //state: 'MA'
-    //};
-    //fullName;
-    //message;
+    user: {
+        firstName: string,
+        lastName: string,
+        age: number,
+        address: {
+            street: string,
+            city: string,
+            state: string
+        }
+    }
 
 
     // Method
     constructor() {
-        this.firstName = 'John';
-        this.lastName = 'Doe';
-        this.age = 30;
-
-        this.address = {
-            street: '50 Main Street',
-            city: 'Boston',
-            state: 'MA'
+        this.user = {
+            firstName: 'John',
+            lastName: 'Doe',
+            age: 30,
+            address: {
+                street: '50 main street',
+                city: 'Dun Laoghaire',
+                state: 'Dublin'
+            }
         }
     }
-    // Custom Methods
-    //sayHello() {
-    //    this.message = 'Hello ' + this.firstName + ' ' + this.lastName;
-    //}
-
-    //showAge() {
-    //    return this.age;
-    //}
-    
- }
+}
