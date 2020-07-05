@@ -10,23 +10,23 @@ import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 
 export class UserComponent {
     // Properties
-<<<<<<< HEAD
+
     firstName: string = 'John';
     lastName: string = 'Doe';
     age: number = 30;
     address;
-=======
-    firstName = 'John';
-    lastName = 'Doe';
-    age = 30;
-    address = {
-        street: '50 Main St',
-        city: 'Boston',
-        state: 'MA'
-    };
+
+    //firstName = 'John';
+    //lastName = 'Doe';
+    //age = 30;
+    //address = {
+        //street: '50 Main St',
+        //city: 'Boston',
+        //state: 'MA'
+    //};
     //fullName;
     //message;
->>>>>>> 51a1c2489f2080556fff842f55dc287fd3a1467d
+    
 
     // Method
     constructor() {
