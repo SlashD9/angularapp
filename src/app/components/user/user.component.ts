@@ -12,7 +12,7 @@ export class UserComponent {
     // Properties
 
     firstName: string = 'John';
-    lastName: string = 'Doe';
+    lastName: string = 'Smith';
     age: number = 30;
     address;
 
@@ -26,7 +26,7 @@ export class UserComponent {
     //};
     //fullName;
     //message;
-    
+
 
     // Method
     constructor() {
