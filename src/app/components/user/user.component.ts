@@ -10,17 +10,8 @@ import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 
 export class UserComponent {
     // Properties
-    user: {
-        firstName: string,
-        lastName: string,
-        age: number,
-        address: {
-            street: string,
-            city: string,
-            state: string
-        }
-    }
-
+    user: User;
+        
 
     // Method
     constructor() {
@@ -34,5 +25,16 @@ export class UserComponent {
                 state: 'Dublin'
             }
         }
+    }
+}
+
+interface User {
+    firstName: string,
+    lastName: string,
+    age: number,
+    address: {
+        street: string,
+        city: string,
+        state: string
     }
 }
