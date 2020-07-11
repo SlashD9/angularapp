@@ -10,6 +10,7 @@ export class UsersComponent implements OnInit {
   users: User[];
   showExtended: Boolean = true;
   loaded: Boolean = false;
+  enableAdd:Boolean = true;
 
   constructor() { }
 
