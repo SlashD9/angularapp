@@ -47,12 +47,6 @@ export class UsersComponent implements OnInit {
       this.addUser({
         firstName: 'Frank',
         lastName: 'James',
-        age: 44,
-        address: {
-            street: '65 High Street',
-            city: 'Wexford Town',
-            state: 'Wexford'
-      }
     })
   }
   addUser(user: User) {
