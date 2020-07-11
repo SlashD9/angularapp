@@ -8,6 +8,8 @@ import { User } from '../../models/User';
 })
 export class UsersComponent implements OnInit {
   users: User[];
+  showExtended: Boolean = true;
+
   constructor() { }
 
   ngOnInit() {
