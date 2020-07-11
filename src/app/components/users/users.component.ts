@@ -19,13 +19,14 @@ export class UsersComponent implements OnInit {
             {
               firstName: 'John',
               lastName: 'Doe',
-              age: 30,
+              age: 65,
               address: {
                   street: '50 main street',
                   city: 'Dun Laoghaire',
                   state: 'Dublin'
               },
-              image: "http://lorempixel.com/600/600/people/3"
+              image: "http://lorempixel.com/600/600/people/3",
+              isActive: true
             },
             {
               firstName: 'Phil',
@@ -36,7 +37,8 @@ export class UsersComponent implements OnInit {
                   city: 'Bray',
                   state: 'Wicklow'
               },
-              image: "http://lorempixel.com/600/600/people/2"
+              image: "http://lorempixel.com/600/600/people/2",
+              isActive: false
             },
             {
               firstName: 'Jenny',
@@ -47,7 +49,8 @@ export class UsersComponent implements OnInit {
                   city: 'Arklow',
                   state: 'Wicklow'
               },
-              image: "http://lorempixel.com/600/600/people/1"
+              image: "http://lorempixel.com/600/600/people/1",
+              isActive: true
             }
           ];
 
