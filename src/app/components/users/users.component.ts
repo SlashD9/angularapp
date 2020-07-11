@@ -12,9 +12,6 @@ export class UsersComponent implements OnInit {
   loaded: Boolean = false;
   enableAdd:Boolean = true;
   // This is an Object
-  currentClasses = {};
-  currentStyles = {}
-
   constructor() { }
 
   ngOnInit() {
@@ -28,9 +25,7 @@ export class UsersComponent implements OnInit {
                   city: 'Dun Laoghaire',
                   state: 'Dublin'
               },
-              image: "http://lorempixel.com/600/600/people/3",
               isActive: true,
-              balance: 100,
               registered: new Date('01/02/2018 08:30:00')
             },
             {
@@ -42,9 +37,7 @@ export class UsersComponent implements OnInit {
                   city: 'Bray',
                   state: 'Wicklow'
               },
-              image: "http://lorempixel.com/600/600/people/2",
               isActive: false,
-              balance: 250,
               registered: new Date('05/08/2019 12:05:00')
             },
             {
@@ -56,21 +49,13 @@ export class UsersComponent implements OnInit {
                   city: 'Arklow',
                   state: 'Wicklow'
               },
-              image: "http://lorempixel.com/600/600/people/1",
               isActive: true,
-              balance: 600,
               registered: new Date('06/20/2016 09:41:00')
             }
           ];
 
         this.loaded = true;
 
-    // this.addUser({
-    //   firstName: "David",
-    //   lastName: "Jackson"
-    // })
-    this.setCurrentClasses();
-    this.setCurrentStyles();
     
   }
 
@@ -79,19 +64,4 @@ export class UsersComponent implements OnInit {
     this.users.push(user);
   }
 
-  // This function controls the ngClass on the button by adding the class of btn-success if enableAdd is true
-  // This also adds the css class of big text to the button if the show extended is enabled
-  setCurrentClasses() {
-    this.currentClasses = {
-      'btn-success': this.enableAdd,
-      'big-text': this.showExtended
-    }
-  }
-
-  setCurrentStyles() {
-    this.currentStyles = {
-      'padding-top' : this.showExtended ? '0' : '40px',
-      'font-size': this.showExtended ? ''  : '40px'
-    }
-  }
 }
