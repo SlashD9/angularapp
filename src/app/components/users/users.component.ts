@@ -14,7 +14,6 @@ export class UsersComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => {
       this.users = [
             {
               firstName: 'John',
@@ -49,7 +48,11 @@ export class UsersComponent implements OnInit {
           ];
 
         this.loaded = true;
-    }, 2000);
+
+    this.addUser({
+      firstName: "David",
+      lastName: "Jackson"
+    })
     
   }
   addUser(user: User) {
