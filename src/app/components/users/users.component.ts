@@ -11,6 +11,8 @@ export class UsersComponent implements OnInit {
   showExtended: Boolean = true;
   loaded: Boolean = false;
   enableAdd:Boolean = true;
+  // This is an Object
+  currentClasses = {};
 
   constructor() { }
 
@@ -60,10 +62,21 @@ export class UsersComponent implements OnInit {
     //   firstName: "David",
     //   lastName: "Jackson"
     // })
+    this.setCurrentClasses()
     
   }
+
+  // This Function adds user to the end of the users list, we could push it to the front using unshift 
   addUser(user: User) {
     this.users.push(user);
   }
 
+  // This function controls the ngClass on the button by adding the class of btn-success if enableAdd is true
+  // This also adds the css class of big text to the button if the show extended is enabled
+  setCurrentClasses() {
+    this.currentClasses = {
+      'btn-success': this.enableAdd,
+      'big-text': this.showExtended
+    }
+  }
 }
