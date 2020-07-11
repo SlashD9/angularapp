@@ -51,8 +51,8 @@ export class UsersComponent implements OnInit {
   //       lastName: 'James',
   //   })
   // }
-  addUser(user: User) {
-    this.users.push(user);
-  }
+  // addUser(user: User) {
+  //   this.users.push(user);
+  // }
 
 }
