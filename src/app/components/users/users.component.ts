@@ -29,7 +29,9 @@ export class UsersComponent implements OnInit {
                   state: 'Dublin'
               },
               image: "http://lorempixel.com/600/600/people/3",
-              isActive: true
+              isActive: true,
+              balance: 100,
+              registered: new Date('01/02/2018 08:30:00')
             },
             {
               firstName: 'Phil',
@@ -41,7 +43,9 @@ export class UsersComponent implements OnInit {
                   state: 'Wicklow'
               },
               image: "http://lorempixel.com/600/600/people/2",
-              isActive: false
+              isActive: false,
+              balance: 250,
+              registered: new Date('05/08/2019 12:05:00')
             },
             {
               firstName: 'Jenny',
@@ -53,7 +57,9 @@ export class UsersComponent implements OnInit {
                   state: 'Wicklow'
               },
               image: "http://lorempixel.com/600/600/people/1",
-              isActive: true
+              isActive: true,
+              balance: 600,
+              registered: new Date('06/20/2016 09:41:00')
             }
           ];
 
