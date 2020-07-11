@@ -12,47 +12,47 @@ export class UsersComponent implements OnInit {
 
   constructor() { }
 
-  // ngOnInit() {
-  //   this.users = [
-  //     {
-  //       firstName: 'John',
-  //       lastName: 'Doe',
-  //       age: 30,
-  //       address: {
-  //           street: '50 main street',
-  //           city: 'Dun Laoghaire',
-  //           state: 'Dublin'
-  //       }
-  //     },
-  //     {
-  //       firstName: 'Phil',
-  //       lastName: 'Johnson',
-  //       age: 33,
-  //       address: {
-  //           street: '55 small street',
-  //           city: 'Bray',
-  //           state: 'Wicklow'
-  //       }
-  //     },
-  //     {
-  //       firstName: 'Jenny',
-  //       lastName: 'Hill',
-  //       age: 25,
-  //       address: {
-  //           street: '45 Slow Street',
-  //           city: 'Arklow',
-  //           state: 'Wicklow'
-  //       }
-  //     }
-  //   ];
+  ngOnInit() {
+    this.users = [
+      {
+        firstName: 'John',
+        lastName: 'Doe',
+        age: 30,
+        address: {
+            street: '50 main street',
+            city: 'Dun Laoghaire',
+            state: 'Dublin'
+        }
+      },
+      {
+        firstName: 'Phil',
+        lastName: 'Johnson',
+        age: 33,
+        address: {
+            street: '55 small street',
+            city: 'Bray',
+            state: 'Wicklow'
+        }
+      },
+      {
+        firstName: 'Jenny',
+        lastName: 'Hill',
+        age: 25,
+        address: {
+            street: '45 Slow Street',
+            city: 'Arklow',
+            state: 'Wicklow'
+        }
+      }
+    ];
 
-  //     this.addUser({
-  //       firstName: 'Frank',
-  //       lastName: 'James',
-  //   })
-  // }
-  // addUser(user: User) {
-  //   this.users.push(user);
-  // }
+      this.addUser({
+        firstName: 'Frank',
+        lastName: 'James',
+    })
+  }
+  addUser(user: User) {
+    this.users.push(user);
+  }
 
 }
