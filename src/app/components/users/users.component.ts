@@ -24,7 +24,8 @@ export class UsersComponent implements OnInit {
                   street: '50 main street',
                   city: 'Dun Laoghaire',
                   state: 'Dublin'
-              }
+              },
+              image: "http://lorempixel.com/600/600/people/3"
             },
             {
               firstName: 'Phil',
@@ -34,7 +35,8 @@ export class UsersComponent implements OnInit {
                   street: '55 small street',
                   city: 'Bray',
                   state: 'Wicklow'
-              }
+              },
+              image: "http://lorempixel.com/600/600/people/2"
             },
             {
               firstName: 'Jenny',
@@ -44,16 +46,17 @@ export class UsersComponent implements OnInit {
                   street: '45 Slow Street',
                   city: 'Arklow',
                   state: 'Wicklow'
-              }
+              },
+              image: "http://lorempixel.com/600/600/people/1"
             }
           ];
 
         this.loaded = true;
 
-    this.addUser({
-      firstName: "David",
-      lastName: "Jackson"
-    })
+    // this.addUser({
+    //   firstName: "David",
+    //   lastName: "Jackson"
+    // })
     
   }
   addUser(user: User) {
