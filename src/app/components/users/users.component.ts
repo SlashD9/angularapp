@@ -8,7 +8,7 @@ import { User } from '../../models/User';
 })
 export class UsersComponent implements OnInit {
   users: User[];
-  showExtended: Boolean = false;
+  showExtended: Boolean = true;
   loaded: Boolean = false;
   enableAdd:Boolean = true;
   // This is an Object
