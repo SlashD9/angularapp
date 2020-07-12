@@ -86,4 +86,9 @@ export class UsersComponent implements OnInit {
     this.users.push(user);
   }
 
+  // Adding an event for when the add user button is pressed
+  fireEvent(e) {
+    // console.log("Button Clicked")
+    console.log(e.type)
+  }
 }

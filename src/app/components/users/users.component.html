@@ -1,6 +1,6 @@
 <h2>Users</h2>
 <!-- Button only shown if anable add is true -->
-<button [disabled]="!enableAdd" class="btn btn-block mb-3">Add New User</button>
+<button (click)="fireEvent($event)" [disabled]="!enableAdd" class="btn btn-block mb-3">Add New User</button>
 
 <!-- Uses ngIf to show only if loaded == ture and that there are users to display -->
 <ul class="list-unstyled" *ngIf="loaded && users?.length > 0; noUsers">
@@ -14,8 +14,7 @@
             <!-- Uses an ngIf to show only if the user has an age and address and showExtended is true-->
             <ul class="list-group" *ngIf="user.age && user.address && showExtended">
                 <li class="list-group-item">Age: {{ user.age }}</li>
-                <li class="list-group-item">Address: {{ user.address.street }}, {{ user.address.city }},
-                    {{ user.address.state }}</li>
+                <li class="list-group-item">Address: {{ user.address.street }}, {{ user.address.city }}, {{ user.address.state }}</li>
                 <li class="list-group-item">Joined: {{ user.registered | date:"medium" }}</li>
             </ul>
         </div>
