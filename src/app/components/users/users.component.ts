@@ -12,7 +12,7 @@ export class UsersComponent implements OnInit {
   users: User[];
 
   // Enable or disables show age and address
-  showExtended: Boolean = true;
+  showExtended: Boolean = false;
 
   // Shows loading message is loaded remains false
   loaded: Boolean = false;

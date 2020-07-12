@@ -1,6 +1,6 @@
 <h2>Users</h2>
 <!-- Button only shown if anable add is true -->
-<button (click)="fireEvent($event)" [disabled]="!enableAdd" class="btn btn-block mb-3">Add New User</button>
+<button (click)="addUser({firstName: 'Mary', lastName= 'Williams', isActive= true})" [disabled]="!enableAdd" class="btn btn-block mb-3">Add New User</button>
 
 <!-- Uses ngIf to show only if loaded == ture and that there are users to display -->
 <ul class="list-unstyled" *ngIf="loaded && users?.length > 0; noUsers">
