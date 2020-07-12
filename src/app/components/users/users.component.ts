@@ -12,7 +12,7 @@ export class UsersComponent implements OnInit {
   users: User[];
 
   // Enable or disables show age and address
-  showExtended: Boolean = false;
+  showExtended: Boolean = true;
 
   // Shows loading message is loaded remains false
   loaded: Boolean = false;
@@ -36,7 +36,8 @@ export class UsersComponent implements OnInit {
           state: 'Dublin'
         },
         isActive: true,
-        registered: new Date('01/02/2018 08:30:00')
+        registered: new Date('01/02/2018 08:30:00'),
+        hide: true
       },
       {
         firstName: 'Phil',
@@ -48,7 +49,8 @@ export class UsersComponent implements OnInit {
           state: 'Wicklow'
         },
         isActive: false,
-        registered: new Date('05/08/2019 12:05:00')
+        registered: new Date('05/08/2019 12:05:00'),
+        hide: true
       },
       {
         firstName: 'Jenny',
@@ -60,7 +62,8 @@ export class UsersComponent implements OnInit {
           state: 'Wicklow'
         },
         isActive: true,
-        registered: new Date('06/20/2016 09:41:00')
+        registered: new Date('06/20/2016 09:41:00'),
+        hide: true
       }
     ];
     // Sets Loaded to true which displays the users and not the Loading message
