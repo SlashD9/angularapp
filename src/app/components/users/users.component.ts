@@ -11,14 +11,7 @@ export class UsersComponent implements OnInit {
   user: User = {
     firstName: '',
     lastName: '',
-    age: null,
-    address: {
-      street: '',
-      city: '',
-      state: ''
-    }
-
-
+    email: ''
   }
 
   // Users Array
@@ -45,12 +38,7 @@ export class UsersComponent implements OnInit {
       {
         firstName: 'John',
         lastName: 'Doe',
-        age: 65,
-        address: {
-          street: '50 main street',
-          city: 'Dun Laoghaire',
-          state: 'Dublin'
-        },
+        email: 'john@gmail.com',
         isActive: true,
         registered: new Date('01/02/2018 08:30:00'),
         hide: true
@@ -58,12 +46,7 @@ export class UsersComponent implements OnInit {
       {
         firstName: 'Phil',
         lastName: 'Johnson',
-        age: 33,
-        address: {
-          street: '55 small street',
-          city: 'Bray',
-          state: 'Wicklow'
-        },
+        email: 'phil@yahoo.com',
         isActive: false,
         registered: new Date('05/08/2019 12:05:00'),
         hide: true
@@ -71,12 +54,7 @@ export class UsersComponent implements OnInit {
       {
         firstName: 'Jenny',
         lastName: 'Hill',
-        age: 25,
-        address: {
-          street: '45 Slow Street',
-          city: 'Arklow',
-          state: 'Wicklow'
-        },
+        email: 'jenny@hotmail.com',
         isActive: true,
         registered: new Date('06/20/2016 09:41:00'),
         hide: true
@@ -89,33 +67,18 @@ export class UsersComponent implements OnInit {
   }
 
   // This Function adds user to the start of the users list, we could push it to the back using push 
-  addUser() {
-    this.user.isActive = true;
-    this.user.registered = new Date();
+  // addUser() {
+  //   this.user.isActive = true;
+  //   this.user.registered = new Date();
 
-    this.users.unshift(this.user);
+  //   this.users.unshift(this.user);
 
-    this.user = {
-      firstName: '',
-      lastName: '',
-      age: null,
-      address: {
-        street: '',
-        city: '',
-        state: ''
-      }
-    }
-  }
-
-  // // Used to show or hide When toggle button is pressed
-  // toggleHide(user: User) {
-  //   user.hide = !user.hide;
+  //   this.user = {
+  //     firstName: '',
+  //     lastName: '',
+  //     email: ''
+  //   }
   // }
-
-  fireEvent(e) {
-    console.log(e.type);
-    console.log(e.target.value);
-  }
 
   onSubmit(e) {
     console.log(123);
