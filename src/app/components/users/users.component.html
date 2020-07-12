@@ -10,7 +10,7 @@
         <div>
             <!-- {{ Interpolation }} from the created users in the user.component.ts using the User.ts interface/Object -->
             <h3>{{ user.firstName }} {{ user.lastName }}
-                <small><button (click)="user.hide = !user.hide;" class="btn btn-dark btn-small">
+                <small><button (click)="user.hide = !user.hide;" *ngIf="user.age && user.address" class="btn btn-dark btn-small">
                     <i [ngClass]="user.hide ? 'fa fa-plus' : 'fa fa-minus' "></i>
                 </button></small>
             </h3>
