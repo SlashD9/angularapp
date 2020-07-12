@@ -89,8 +89,22 @@ export class UsersComponent implements OnInit {
   }
 
   // This Function adds user to the start of the users list, we could push it to the back using push 
-  addUser(user: User) {
-    this.users.unshift(user);
+  addUser() {
+    this.user.isActive = true;
+    this.user.registered = new Date();
+
+    this.users.unshift(this.user);
+
+    this.user = {
+      firstName: '',
+      lastName: '',
+      age: null,
+      address: {
+        street: '',
+        city: '',
+        state: ''
+      }
+    }
   }
 
   // // Used to show or hide When toggle button is pressed
