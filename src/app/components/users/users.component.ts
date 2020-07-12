@@ -77,8 +77,8 @@ export class UsersComponent implements OnInit {
     this.users.unshift(user);
   }
 
-  // Used to show or hide When toggle button is pressed
-  toggleHide(user: User) {
-    user.hide = !user.hide
-  }
+  // // Used to show or hide When toggle button is pressed
+  // toggleHide(user: User) {
+  //   user.hide = !user.hide;
+  // }
 }
