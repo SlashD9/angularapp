@@ -77,9 +77,8 @@ export class UsersComponent implements OnInit {
     this.users.unshift(user);
   }
 
-  // Adding an event for when the add user button is pressed
-  fireEvent(e) {
-    // console.log("Button Clicked")
-    console.log(e.type)
+  // Used to show or hide When toggle button is pressed
+  toggleHide(user: User) {
+    user.hide = !user.hide
   }
 }

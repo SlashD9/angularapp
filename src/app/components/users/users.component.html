@@ -9,7 +9,9 @@
     <li class="card card-body mb-2" *ngFor="let user of users" [class.bg-light]="user.isActive">
         <div>
             <!-- {{ Interpolation }} from the created users in the user.component.ts using the User.ts interface/Object -->
-            <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+            <h3>{{ user.firstName }} {{ user.lastName }}
+                <small><button (click)="toggleHide(user)" class="btn btn-dark btn-small">Toggle</button></small>
+            </h3>
 
             <!-- Uses an ngIf to show only if the user has an age and address and showExtended is true-->
             <ul class="list-group" *ngIf="user.age && user.address && !user.hide">
