@@ -61,18 +61,6 @@ export class UsersComponent implements OnInit {
         },
         isActive: true,
         registered: new Date('06/20/2016 09:41:00')
-      },
-      {
-        firstName: 'Frank',
-        lastName: 'Abignale',
-        age: 16,
-        address: {
-          street: '45 Slow Street',
-          city: 'Monte Shalard',
-          state: 'France'
-        },
-        isActive: false,
-        registered: new Date('03/30/2000 10:41:00')
       }
     ];
     // Sets Loaded to true which displays the users and not the Loading message
@@ -81,9 +69,9 @@ export class UsersComponent implements OnInit {
 
   }
 
-  // This Function adds user to the end of the users list, we could push it to the front using unshift 
+  // This Function adds user to the start of the users list, we could push it to the back using push 
   addUser(user: User) {
-    this.users.push(user);
+    this.users.unshift(user);
   }
 
   // Adding an event for when the add user button is pressed
