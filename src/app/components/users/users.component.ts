@@ -8,6 +8,19 @@ import { User } from '../../models/User';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+  user: User = {
+    firstName: '',
+    lastName: '',
+    age: null,
+    address: {
+      street: '',
+      city: '',
+      state: ''
+    }
+
+
+  }
+
   // Users Array
   users: User[];
 
@@ -19,6 +32,9 @@ export class UsersComponent implements OnInit {
 
   // Shows Add New Button if enabled
   enableAdd: Boolean = true;
+
+  // Shows UserForm if true
+  showUserForm: boolean = false;
 
   // This is an Object
   constructor() { }
@@ -81,4 +97,14 @@ export class UsersComponent implements OnInit {
   // toggleHide(user: User) {
   //   user.hide = !user.hide;
   // }
+
+  fireEvent(e) {
+    console.log(e.type);
+    console.log(e.target.value);
+  }
+
+  onSubmit(e) {
+    console.log(123);
+    e.preventDefault();
+  }
 }

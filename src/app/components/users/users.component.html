@@ -1,6 +1,36 @@
+<button (click)="showUserForm = !showUserForm" class="btn btn-dark mb-3">Add User</button>
+<div class="card card-body mb-3" *ngIf="showUserForm">
+    <form (submit)="onSubmit($event)">
+        <div class="form form-group">
+            <label>First Name</label>
+            <input type="text" [(ngModel)]="user.firstName" class="form-control" name="firstName">
+        </div>
+        <div class="form form-group">
+            <label>Last Name</label>
+            <input type="text" [(ngModel)]="user.lastName" class="form-control" name="lastName">
+        </div>
+        <div class="form form-group">
+            <label>Age</label>
+            <input type="number" [(ngModel)]="user.age" class="form-control" name="age">
+        </div>
+        <div class="form form-group">
+            <label>Street Address</label>
+            <input type="text" [(ngModel)]="user.address.street" class="form-control" name="street">
+        </div>
+        <div class="form form-group">
+            <label>City</label>
+            <input type="text" [(ngModel)]="user.address.city" class="form-control" name="city">
+        </div>
+        <div class="form form-group">
+            <label>City</label>
+            <input type="text" [(ngModel)]="user.address.state" class="form-control" name="state">
+        </div>
+        <!-- Button only shown if anable add is true -->
+        <button (click)="addUser({firstName: 'Mary', lastName: 'Williams', isActive: true})" [disabled]="!enableAdd" class="btn btn-block mb-3">Add New User</button>
+    </form>
+</div>
 <h2>Users</h2>
-<!-- Button only shown if anable add is true -->
-<button (click)="addUser({firstName: 'Mary', lastName: 'Williams', isActive: true})" [disabled]="!enableAdd" class="btn btn-block mb-3">Add New User</button>
+
 
 <!-- Uses ngIf to show only if loaded == ture and that there are users to display -->
 <ul class="list-unstyled" *ngIf="loaded && users?.length > 0; noUsers">
