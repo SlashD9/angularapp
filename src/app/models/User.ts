@@ -1,3 +1,4 @@
+// User Interface object that is exported to be used within components
 export interface User {
     firstName: string,
     lastName: string,

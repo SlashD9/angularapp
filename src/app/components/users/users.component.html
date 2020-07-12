@@ -1,11 +1,15 @@
 <h2>Users</h2>
 <button [disabled]="!enableAdd" class="btn btn-block mb-3">Add New User</button>
+<!-- Uses ngIf to show only if loaded == ture and that there are users to display -->
 <ul class="list-unstyled" *ngIf="loaded && users?.length > 0; noUsers">
-    <li class="card card-body mb-2" *ngFor="let user of users" [class.bg-light]="user.isActive"
-    >
 
+    <!-- Use of ngFor, this will cycle through the users and display each one -->
+    <li class="card card-body mb-2" *ngFor="let user of users" [class.bg-light]="user.isActive">
         <div>
+            <!-- {{ Interpolation }} from the created users in the user.component.ts using the User.ts interface/Object -->
             <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+
+            <!-- Uses an ngIf to show only if the user has an age and address and showExtended is true-->
             <ul class="list-group" *ngIf="user.age && user.address && showExtended">
                 <li class="list-group-item">Age: {{ user.age }}</li>
                 <li class="list-group-item">Address: {{ user.address.street }}, {{ user.address.city }},
@@ -17,6 +21,9 @@
     </li>
 </ul>
 
+<!-- Shows no users if the users length is 0, or there are no users -->
 <h4 *ngIf="users?.length == 0">No Users Found</h4>
 
+<!-- Shows Loading Users if loaded is false, this can be used to display a loading screen by using a setTimout or if 
+connection to the server has been affected -->
 <h4 *ngIf="!loaded">Loading Users...</h4>

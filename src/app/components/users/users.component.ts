@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// Imported interface/Object from User.ts 
 import { User } from '../../models/User';
 
 @Component({
@@ -7,14 +8,23 @@ import { User } from '../../models/User';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+  // Users Array
   users: User[];
+
+  // Enable or disables show age and address
   showExtended: Boolean = true;
+
+  // Shows loading message is loaded remains false
   loaded: Boolean = false;
+
+  // Shows Add New Button if enabled
   enableAdd:Boolean = true;
+
   // This is an Object
   constructor() { }
 
   ngOnInit() {
+    // Imported interface / Object that can be used to create users from User.ts
       this.users = [
             {
               firstName: 'John',
@@ -51,9 +61,21 @@ export class UsersComponent implements OnInit {
               },
               isActive: true,
               registered: new Date('06/20/2016 09:41:00')
+            },
+            {
+              firstName: 'Frank',
+              lastName: 'Abignale',
+              age: 16,
+              address: {
+                  street: '45 Slow Street',
+                  city: 'Monte Shalard',
+                  state: 'France'
+              },
+              isActive: false,
+              registered: new Date('03/30/2000 10:41:00')
             }
           ];
-
+        // Sets Loaded to true which displays the users and not the Loading message
         this.loaded = true;
 
     
