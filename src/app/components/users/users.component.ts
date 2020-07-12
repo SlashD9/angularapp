@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 // Imported interface/Object from User.ts 
 import { User } from '../../models/User';
 
@@ -28,6 +28,9 @@ export class UsersComponent implements OnInit {
 
   // Shows UserForm if true
   showUserForm: boolean = false;
+
+  // Form 
+  @ViewChild('userForm') form: any;
 
   // This is an Object
   constructor() { }
@@ -66,20 +69,24 @@ export class UsersComponent implements OnInit {
 
   }
 
-  // This Function adds user to the start of the users list, we could push it to the back using push 
-  // addUser() {
-  //   this.user.isActive = true;
-  //   this.user.registered = new Date();
+  // Here is where we submin our form, we need to check that the form is valid and also take in the value of User
+  onSubmit({value, valid}: {value: User, valid: boolean}) {
+    // Here we check the form is valid and if not we console.log the message
+    if(!valid){
+      console.log('Form is not valid');
+    } 
+    // Here we take the value of User and set some of the other values 
+    else {
+      value.isActive = true;
+      value.registered = new Date();
+      value.hide = true;
 
-  //   this.users.unshift(this.user);
+      // we add the new user to the top of the list
+      this.users.unshift(value);
 
-  //   this.user = {
-  //     firstName: '',
-  //     lastName: '',
-  //     email: ''
-  //   }
-  // }
+      // we reset the form inputs to blank
+      this.form.reset();
+    }
 
-  onSubmit() {
   }
 }
