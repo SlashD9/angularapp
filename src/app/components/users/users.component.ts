@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { DataService } from '../../services/data.service';
 // Imported interface/Object from User.ts 
 import { User } from '../../models/User';
 
@@ -16,53 +17,25 @@ export class UsersComponent implements OnInit {
 
   // Users Array
   users: User[];
-
   // Enable or disables show age and address
   showExtended: Boolean = true;
-
   // Shows loading message is loaded remains false
   loaded: Boolean = false;
-
   // Shows Add New Button if enabled
   enableAdd: Boolean = true;
-
   // Shows UserForm if true
-  showUserForm: boolean = false;
-
+  showUserForm: boolean = false;   
   // Form 
   @ViewChild('userForm') form: any;
 
+   
   // This is an Object
-  constructor() { }
+  constructor(private _dataService: DataService) { }
 
   ngOnInit() {
-    // Imported interface / Object that can be used to create users from User.ts
-    this.users = [
-      {
-        firstName: 'John',
-        lastName: 'Doe',
-        email: 'john@gmail.com',
-        isActive: true,
-        registered: new Date('01/02/2018 08:30:00'),
-        hide: true
-      },
-      {
-        firstName: 'Phil',
-        lastName: 'Johnson',
-        email: 'phil@yahoo.com',
-        isActive: false,
-        registered: new Date('05/08/2019 12:05:00'),
-        hide: true
-      },
-      {
-        firstName: 'Jenny',
-        lastName: 'Hill',
-        email: 'jenny@hotmail.com',
-        isActive: true,
-        registered: new Date('06/20/2016 09:41:00'),
-        hide: true
-      }
-    ];
+
+    this.users = this._dataService.getUsers();
+ 
     // Sets Loaded to true which displays the users and not the Loading message
     this.loaded = true;
 
@@ -82,7 +55,7 @@ export class UsersComponent implements OnInit {
       value.hide = true;
 
       // we add the new user to the top of the list
-      this.users.unshift(value);
+      this._dataService.addUser(value);
 
       // we reset the form inputs to blank
       this.form.reset();
